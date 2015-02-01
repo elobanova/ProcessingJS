@@ -1,6 +1,6 @@
 var y = 100,
-	x = 50,
-	imgages = [];
+x = 50,
+images = [];
 
 window.onload = function () {
 	var canvas = document.getElementById("canvas-element"),
@@ -12,7 +12,7 @@ function sketchProc(processing) {
 	processing.frameRate(30);
 	var img1 = processing.loadImage("duck.png");
 	processing.mousePressed = function () {
-		imgages.push({
+		images.push({
 			x : processing.mouseX,
 			y : processing.mouseY
 		});
@@ -20,8 +20,8 @@ function sketchProc(processing) {
 
 	processing.draw = function () {
 		processing.background(255);
-		for (var i = 0; i < imgages.length; i++) {
-			processing.image(img1, imgages[i].x, imgages[i].y, 100, 100);
+		for (var i = 0; i < images.length; i++) {
+			processing.image(img1, images[i].x, images[i].y, 100, 100);
 		}
 
 		y = y - 1;
