@@ -10,7 +10,7 @@ window.onload = function () {
 function sketchProc(processing) {
 	processing.stroke(255);
 	processing.frameRate(30);
-	var img1 = processing.loadImage("flower.png");
+	var img1 = processing.loadImage("duck.png");
 	processing.mousePressed = function () {
 		imgages.push({
 			x : processing.mouseX,
